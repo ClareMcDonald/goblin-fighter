@@ -49,7 +49,7 @@ form.addEventListener('submit', (e) => {
         name: goblinName,
         hp: Math.ceil(Math.random() * 5)
     };
-
+    
     goblins.push(newGoblin);
   
     displayGoblins();
