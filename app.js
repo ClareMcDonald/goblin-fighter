@@ -1,4 +1,4 @@
-import { renderGoblin } from "./utils";
+import { renderGoblin } from './utils.js';
 
 // import functions and grab DOM elements
 const defeatedGoblinsEl = document.getElementById('defeated-goblins');
@@ -41,7 +41,7 @@ let goblins = [
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const data = newFormData(form);
+    const data = new FormData(form);
 
     const goblinName = data.get('goblin-input');
     
@@ -55,10 +55,20 @@ form.addEventListener('submit', (e) => {
     displayGoblins();
 });
 
-displayGoblins() {
-  for (let goblin of goblins) {
-    const goblinNew = renderGoblin(goblin);
+function displayGoblins() {
+    goblinsEl.textContent = '';
 
-    
-  }
+    for (let goblin of goblins) {
+        const goblinEl = renderGoblin(goblin);
+
+      
+        goblinEl.addEventListener('click', () => {
+
+            displayGoblins();
+        });
+
+        goblinsEl.append(goblinEl);
+    }
 }
+
+  
