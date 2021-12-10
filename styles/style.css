@@ -33,7 +33,8 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 100px;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
@@ -53,13 +54,6 @@ section {
     border: solid 2px var(--color1);
 }
 
-header {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
-}
 
 
 h2 {
@@ -78,7 +72,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +82,71 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+body {
+    background-image: url("../assets/castle-cartoon.png");
+    display: flex;
+}
+
+#fighter {
+    image: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#fighter img {
+    width: 200px;
+}
+
+form {
+    background-color: rgb(81, 155, 155);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-content: right;
+    justify-items: right;
+    align-items: right;
+}
+
+.goblin {
+    border: 5px solid purple;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #dda1eb;
+    justify-items: center;
+    align-items: center;
+}
+
+.dead {
+    opacity: .5;
+    cursor: default;
+}
+
+.goblin-section {
+    align-items: right;
+}
+
+.adventurer-section {
+    background-color: transparent;
+    
+}
+
+#defeated-goblins-div {
+    background-color: rgb(81, 155, 155);
+    padding: 5px;
+    margin: 5px;
+}
+
+#hp-div {      
+    background-color: rgb(81, 155, 155);
+    padding: 5px;
+    margin: 5px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
