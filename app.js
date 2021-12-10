@@ -61,13 +61,38 @@ function displayGoblins() {
     for (let goblin of goblins) {
         const goblinEl = renderGoblin(goblin);
 
-      
-        goblinEl.addEventListener('click', () => {
+        if (goblin.hp > 0) {
+            goblinEl.addEventListener('click', () => {
+            
+                if (Math.random() < .33) {
+                    goblin.hp--;
+                    alert('you hit ' + goblin.name + '!');
+                } else {
+                    alert('you tried to hit ' + goblin.name + ' but missed!');
+                }
+          
+                if (Math.random() < .5) {
+                    fighterHp--;
+                    alert(goblin.name + 'hit you!');
+                } else {
+                    alert(goblin.name + ' tried to hit you, but missed!');
+                }
 
-            displayGoblins();
-        });
+                if (goblin.hp === 0) {
+                    defeatedGoblins++;
+                }
+            
+                if (fighterHp === 0) {
+                    alert('You have died. GAME OVER!');
+                }
 
-        goblinsEl.append(goblinEl);
+                defeatedGoblinsEl.textContent = defeatedGoblins;
+                fighterHpEl.textContent = fighterHp;
+                displayGoblins();
+
+            });
+
+            goblinsEl.append(goblinEl);
+        }
     }
 }
-
