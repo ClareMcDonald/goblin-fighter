@@ -71,7 +71,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -85,4 +85,33 @@ footer {
 
 body {
     background-image: url("../assets/castle-cartoon.png");
+    display: flex;
 }
+
+#fighter {
+    image: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#fighter img {
+    width: 200px;
+}
+form {
+    background-color: rgb(81, 155, 155);
+    padding: 5px;
+    justify-items: right;
+    align-items: right;
+}
+
+.goblin {
+    border: 5px solid purple;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #dda1eb;
+    justify-items: center;
+    align-items: center;
+}
+
