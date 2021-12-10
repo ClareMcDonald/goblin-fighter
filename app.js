@@ -1,3 +1,5 @@
+import { renderGoblin } from "./utils";
+
 // import functions and grab DOM elements
 const defeatedGoblinsEl = document.getElementById('defeated-goblins');
 const fighterEl = document.getElementById('fighter');
@@ -53,4 +55,10 @@ form.addEventListener('submit', (e) => {
     displayGoblins();
 });
 
-displayGoblins();
+displayGoblins() {
+  for (let goblin of goblins) {
+    const goblinNew = renderGoblin(goblin);
+
+    
+  }
+}
