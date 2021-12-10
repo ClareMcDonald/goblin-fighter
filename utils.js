@@ -8,7 +8,11 @@ export function renderGoblin(goblinData) {
 
     nameEl.textContent = goblinData.name;
     hpEl.textContent = goblinData.hp;
-    emojiEl.textContent = '😈 ';
+    emojiEl.textContent = goblinData.hp > 0 ? '😈 ' : '🔥';
+
+    if (goblinData.hp === 0) {
+        goblinDiv.classList.add('dead');
+    }
 
     goblinDiv.append(nameEl, hpEl, emojiEl);
 

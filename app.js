@@ -85,14 +85,15 @@ function displayGoblins() {
                 if (fighterHp === 0) {
                     alert('You have died. GAME OVER!');
                 }
-
+                
                 defeatedGoblinsEl.textContent = defeatedGoblins;
                 fighterHpEl.textContent = fighterHp;
                 displayGoblins();
 
             });
-
-            goblinsEl.append(goblinEl);
+          
         }
+        goblinsEl.append(goblinEl);
     }
 }
+displayGoblins();

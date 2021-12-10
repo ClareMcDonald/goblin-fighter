@@ -116,3 +116,7 @@ form {
     align-items: center;
 }
 
+.dead {
+    opacity: .5;
+    cursor: default;
+}
